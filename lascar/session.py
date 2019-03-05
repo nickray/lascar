@@ -210,7 +210,7 @@ class Session:
             return self.engines[item]
         elif isinstance(item,str):
             for engine in self.engines:
-                if engine.name is item:
+                if engine.name == item:
                     return engine
         raise ValueError('No engine named %s.'% str(item))
 
